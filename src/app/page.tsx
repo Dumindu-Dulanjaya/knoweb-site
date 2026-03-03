@@ -10,6 +10,7 @@ import BusinessBenefitsSection from '@/components/sections/BusinessBenefitsSecti
 import ProblemsSection from '@/components/sections/ProblemsSection';
 import HowWeWorkSection from '@/components/sections/HowWeWorkSection';
 import CTASection from '@/components/sections/CTASection';
+import ResourcesPreviewSection from '@/components/sections/ResourcesPreviewSection';
 
 export const metadata: Metadata = {
   title: 'Knoweb — SaaS Platforms & Custom Software Solutions for Growing Businesses',
@@ -30,6 +31,7 @@ export default function HomePage() {
       <BusinessBenefitsSection />
       <ProblemsSection />
       <HowWeWorkSection />
+      <ResourcesPreviewSection />
       <CTASection />
     </>
   );
