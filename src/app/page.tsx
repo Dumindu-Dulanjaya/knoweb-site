@@ -4,7 +4,8 @@ import StatsStripSection from '@/components/sections/StatsStripSection';
 import WhyKnowebSection from '@/components/sections/WhyKnowebSection';
 import SolutionModelsSection from '@/components/sections/SolutionModelsSection';
 import TargetAudienceSection from '@/components/sections/TargetAudienceSection';
-import PlatformsSnapshot from '@/components/sections/PlatformsSnapshot';
+import SolutionsWeDeliverSection from '@/components/sections/SolutionsWeDeliverSection';
+import CustomerSuccessSection from '@/components/sections/CustomerSuccessSection';
 import BusinessBenefitsSection from '@/components/sections/BusinessBenefitsSection';
 import ProblemsSection from '@/components/sections/ProblemsSection';
 import HowWeWorkSection from '@/components/sections/HowWeWorkSection';
@@ -24,7 +25,8 @@ export default function HomePage() {
       <WhyKnowebSection />
       <SolutionModelsSection />
       <TargetAudienceSection />
-      <PlatformsSnapshot />
+      <SolutionsWeDeliverSection />
+      <CustomerSuccessSection />
       <BusinessBenefitsSection />
       <ProblemsSection />
       <HowWeWorkSection />
