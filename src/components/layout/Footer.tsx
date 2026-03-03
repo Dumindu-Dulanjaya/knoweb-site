@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const footerLinks = {
     'Quick Links': [
@@ -36,14 +37,8 @@ export default function Footer() {
                 }}>
                     {/* Brand column */}
                     <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '24px' }}>
-                            <div style={{ width: '36px', height: '36px', background: 'linear-gradient(135deg, #0057FF 0%, #00C6FF 100%)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10L8 6L12 10L16 6" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M4 14L8 10L12 14L16 10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
-                                </svg>
-                            </div>
-                            <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.4rem', color: '#fff', letterSpacing: '-0.02em' }}>Knoweb</span>
+                        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', marginBottom: '24px' }}>
+                            <Image src="/knoweblogo.png" alt="Knoweb logo" width={180} height={48} style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
                         </Link>
 
                         <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '32px', maxWidth: '320px' }}>

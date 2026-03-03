@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 
 const navLinks = [
@@ -112,21 +113,9 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0, marginRight: '32px' }}
+            style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', flexShrink: 0, marginRight: '32px' }}
           >
-            <div style={{
-              width: '34px', height: '34px',
-              background: 'linear-gradient(135deg,#0057FF 0%,#00C6FF 100%)',
-              borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-            }}>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <path d="M4 10L8 6L12 10L16 6" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4 14L8 10L12 14L16 10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
-              </svg>
-            </div>
-            <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1.15rem', color: '#0A0F1E', letterSpacing: '-0.02em' }}>
-              KNOWEB
-            </span>
+            <Image src="/knoweblogo.png" alt="Knoweb logo" width={180} height={48} style={{ objectFit: 'contain' }} priority />
           </Link>
 
           {/* Desktop Nav */}
@@ -354,14 +343,8 @@ export default function Header() {
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '18px 20px', borderBottom: '1px solid #F3F4F6',
         }}>
-          <Link href="/" onClick={() => setMobileOpen(false)} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div style={{ width: '30px', height: '30px', background: 'linear-gradient(135deg,#0057FF,#00C6FF)', borderRadius: '7px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                <path d="M4 10L8 6L12 10L16 6" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4 14L8 10L12 14L16 10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
-              </svg>
-            </div>
-            <span style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 800, fontSize: '1rem', color: '#0A0F1E' }}>KNOWEB</span>
+          <Link href="/" onClick={() => setMobileOpen(false)} style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <Image src="/knoweblogo.png" alt="Knoweb logo" width={160} height={42} style={{ objectFit: 'contain' }} priority />
           </Link>
           <button onClick={() => setMobileOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', color: '#6B7280', borderRadius: '6px' }}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
