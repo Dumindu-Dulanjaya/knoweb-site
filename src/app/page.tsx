@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/HeroSection';
+import StatsStripSection from '@/components/sections/StatsStripSection';
 import WhyKnowebSection from '@/components/sections/WhyKnowebSection';
 import SolutionModelsSection from '@/components/sections/SolutionModelsSection';
 import TargetAudienceSection from '@/components/sections/TargetAudienceSection';
@@ -19,6 +20,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <StatsStripSection />
       <WhyKnowebSection />
       <SolutionModelsSection />
       <TargetAudienceSection />
