@@ -1,120 +1,175 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function WhyKnowebSection() {
     return (
-        <section className="section-pad surface-light" style={{ padding: '100px 0' }}>
+        <section
+            style={{
+                background: '#0B0F14',
+                padding: '100px 0',
+                borderTop: '1px solid rgba(255,255,255,0.06)',
+            }}
+        >
             <div className="container-max">
-                <div className="layout-2col" style={{ alignItems: 'center', gap: '80px' }}>
-
-                    {/* ── Left: Story & CTA ── */}
+                <div
+                    style={{
+                        display: 'grid',
+                        gridTemplateColumns: '1fr 1fr',
+                        gap: '80px',
+                        alignItems: 'center',
+                    }}
+                    className="why-knoweb-grid"
+                >
+                    {/* ── Left: Text Content ── */}
                     <div>
-                        <div className="tag" style={{ marginBottom: '24px' }}>Our Purpose</div>
-                        <h2 style={{
-                            fontFamily: 'Outfit, sans-serif',
-                            fontSize: 'clamp(2rem, 4vw, 3rem)',
-                            fontWeight: 800,
-                            marginBottom: '28px',
-                            color: '#0A0F1E',
-                            lineHeight: 1.1,
-                            letterSpacing: '-0.02em'
-                        }}>
-                            Why Knoweb Exists
+                        {/* Tag */}
+                        <div
+                            style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                                background: 'rgba(34,197,94,0.1)',
+                                border: '1px solid rgba(34,197,94,0.2)',
+                                padding: '4px 14px', borderRadius: '100px',
+                                fontSize: '0.7rem', fontWeight: 700,
+                                color: '#22C55E', marginBottom: '24px',
+                                letterSpacing: '0.06em', textTransform: 'uppercase',
+                            }}
+                        >
+                            Our Purpose
+                        </div>
+
+                        <h2
+                            style={{
+                                fontFamily: 'Outfit, sans-serif',
+                                fontSize: 'clamp(1.8rem, 3.5vw, 2.7rem)',
+                                fontWeight: 800, lineHeight: 1.15,
+                                color: '#F1F5F9', marginBottom: '24px',
+                                letterSpacing: '-0.02em',
+                            }}
+                        >
+                            Practical Software for{' '}
+                            <span style={{ color: '#22C55E' }}>Real Business Growth.</span>
                         </h2>
-                        <p style={{
-                            color: '#4B5563',
-                            fontSize: '1.1rem',
-                            lineHeight: 1.7,
-                            marginBottom: '24px',
-                            maxWidth: '520px'
-                        }}>
-                            Most businesses don't need more software complexity. They need platforms that work on day one.
-                            Knoweb was built on a simple belief: prioritize <strong>practical systems over complexity</strong>,
-                            focus relentlessly on <strong>measurable business improvement</strong>, and stand by our clients
-                            as a <strong>long-term technology partner</strong> through every stage of growth.
+
+                        <p
+                            style={{
+                                color: 'rgba(255,255,255,0.55)',
+                                fontSize: '1.05rem', lineHeight: 1.75,
+                                marginBottom: '20px', maxWidth: '500px',
+                            }}
+                        >
+                            Most businesses don&apos;t need more software complexity — they need
+                            platforms that work on day one. Knoweb was built on a simple belief:
+                            prioritize{' '}
+                            <strong style={{ color: 'rgba(255,255,255,0.8)' }}>practical systems over complexity</strong>,
+                            focus relentlessly on{' '}
+                            <strong style={{ color: 'rgba(255,255,255,0.8)' }}>measurable business improvement</strong>,
+                            and stand by our clients as a{' '}
+                            <strong style={{ color: 'rgba(255,255,255,0.8)' }}>long-term technology partner</strong>{' '}
+                            through every stage of growth.
                         </p>
 
-                        <div style={{ marginTop: '40px' }}>
-                            <Link href="/about" style={{
-                                display: 'inline-flex', alignItems: 'center', gap: '8px',
-                                color: '#0057FF', fontWeight: 700, fontSize: '1rem',
-                                textDecoration: 'none', transition: 'gap 0.2s',
+                        <p
+                            style={{
+                                color: 'rgba(255,255,255,0.45)',
+                                fontSize: '0.98rem', lineHeight: 1.7,
+                                marginBottom: '36px', maxWidth: '500px',
                             }}
-                                onMouseEnter={(e) => (e.currentTarget.style.gap = '12px')}
-                                onMouseLeave={(e) => (e.currentTarget.style.gap = '8px')}
-                            >
-                                Know More About Us
-                                <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                                    <path d="M4 10H16M10 4L16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </Link>
+                        >
+                            From subscription-based SaaS platforms to fully custom enterprise systems
+                            and AI-powered products — we replace messy spreadsheets and fragmented
+                            tools with structured digital operations.
+                        </p>
+
+                        {/* CTA Link */}
+                        <Link
+                            href="/about"
+                            style={{
+                                display: 'inline-flex', alignItems: 'center', gap: '8px',
+                                background: 'rgba(255,255,255,0.06)',
+                                border: '1px solid rgba(255,255,255,0.14)',
+                                color: 'rgba(255,255,255,0.85)',
+                                textDecoration: 'none',
+                                fontSize: '0.9rem', fontWeight: 600,
+                                padding: '12px 28px', borderRadius: '8px',
+                                transition: 'all 0.22s ease',
+                                letterSpacing: '0.01em',
+                            }}
+                            onMouseEnter={(e) => {
+                                (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(34,197,94,0.1)';
+                                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(34,197,94,0.3)';
+                                (e.currentTarget as HTMLAnchorElement).style.color = '#22C55E';
+                                (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
+                            }}
+                            onMouseLeave={(e) => {
+                                (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.06)';
+                                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.14)';
+                                (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.85)';
+                                (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
+                            }}
+                        >
+                            Know More About Us
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </Link>
+                    </div>
+
+                    {/* ── Right: Team Photo ── */}
+                    <div style={{ position: 'relative' }}>
+                        {/* Green glow behind image */}
+                        <div style={{
+                            position: 'absolute', top: '50%', left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            width: '80%', height: '80%',
+                            background: 'radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%)',
+                            pointerEvents: 'none', zIndex: 0,
+                        }} />
+
+                        <div
+                            style={{
+                                borderRadius: '0', overflow: 'hidden',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                boxShadow: '0 24px 64px rgba(0,0,0,0.5)',
+                                position: 'relative', zIndex: 1,
+                            }}
+                        >
+                            <Image
+                                src="/about-team.png"
+                                alt="Knoweb team working on software systems"
+                                width={600}
+                                height={420}
+                                style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'cover' }}
+                            />
+                        </div>
+
+                        {/* Floating Stat Badge */}
+                        <div style={{
+                            position: 'absolute', bottom: '-24px', left: '-24px', zIndex: 10,
+                            background: '#131C2E',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            borderRadius: '14px', padding: '16px 22px',
+                            boxShadow: '0 12px 32px rgba(0,0,0,0.4)',
+                            display: 'flex', alignItems: 'center', gap: '14px',
+                            animation: 'heroFloat1 6s ease-in-out infinite',
+                        }}>
+                            <div style={{
+                                width: '42px', height: '42px', borderRadius: '10px',
+                                background: 'rgba(34,197,94,0.12)',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                color: '#22C55E', fontSize: '1.2rem',
+                            }}>
+                                ✓
+                            </div>
+                            <div>
+                                <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#F1F5F9', lineHeight: 1.1 }}>50+</div>
+                                <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', fontWeight: 500, marginTop: '2px' }}>
+                                    Businesses Deployed
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    {/* ── Right: Abstract System SVG ── */}
-                    <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-                        {/* Decorative background blob */}
-                        <div style={{
-                            position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-                            width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(0,87,255,0.06) 0%, transparent 70%)',
-                            zIndex: 0
-                        }}></div>
-
-                        {/* Abstract System SVG Illustration */}
-                        <svg width="100%" height="auto" viewBox="0 0 400 360" fill="none" style={{ position: 'relative', zIndex: 1, maxWidth: '420px' }}>
-                            {/* Central Hub */}
-                            <circle cx="200" cy="180" r="45" fill="#fff" stroke="#E5E7EB" strokeWidth="2" />
-                            <circle cx="200" cy="180" r="35" fill="url(#blue_grad_center)" />
-                            <path d="M192 180L198 186L210 174" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-
-                            {/* Lines connecting to nodes */}
-                            <path d="M200 135V70" stroke="#0057FF" strokeWidth="2" strokeDasharray="6 6" strokeOpacity="0.4" />
-                            <path d="M245 180H310" stroke="#0057FF" strokeWidth="2" strokeDasharray="6 6" strokeOpacity="0.4" />
-                            <path d="M200 225V290" stroke="#0057FF" strokeWidth="2" strokeDasharray="6 6" strokeOpacity="0.4" />
-                            <path d="M155 180H90" stroke="#0057FF" strokeWidth="2" strokeDasharray="6 6" strokeOpacity="0.4" />
-                            <path d="M232 148L270 110" stroke="#0057FF" strokeWidth="2" strokeDasharray="6 6" strokeOpacity="0.4" />
-                            <path d="M168 212L130 250" stroke="#0057FF" strokeWidth="2" strokeDasharray="6 6" strokeOpacity="0.4" />
-
-                            {/* Node 1: Top */}
-                            <rect x="170" y="30" width="60" height="40" rx="8" fill="#fff" stroke="#E5E7EB" strokeWidth="1.5" />
-                            <rect x="180" y="46" width="40" height="8" rx="4" fill="#EEF2FF" />
-
-                            {/* Node 2: Right */}
-                            <rect x="310" y="160" width="60" height="40" rx="8" fill="#fff" stroke="#E5E7EB" strokeWidth="1.5" />
-                            <circle cx="340" cy="180" r="8" fill="#EEF2FF" />
-
-                            {/* Node 3: Bottom */}
-                            <rect x="170" y="290" width="60" height="40" rx="8" fill="#fff" stroke="#E5E7EB" strokeWidth="1.5" />
-                            <rect x="185" y="306" width="10" height="10" rx="2" fill="#EEF2FF" />
-                            <rect x="205" y="306" width="10" height="10" rx="2" fill="#EEF2FF" />
-
-                            {/* Node 4: Left */}
-                            <rect x="30" y="160" width="60" height="40" rx="8" fill="#fff" stroke="#E5E7EB" strokeWidth="1.5" />
-                            <rect x="42" y="176" width="36" height="8" rx="4" fill="#EEF2FF" />
-
-                            {/* Node 5: Top Right */}
-                            <circle cx="280" cy="100" r="20" fill="#fff" stroke="#E5E7EB" strokeWidth="1.5" />
-                            <circle cx="280" cy="100" r="10" fill="#00C6FF" fillOpacity="0.2" />
-
-                            {/* Node 6: Bottom Left */}
-                            <circle cx="120" cy="260" r="20" fill="#fff" stroke="#E5E7EB" strokeWidth="1.5" />
-                            <circle cx="120" cy="260" r="10" fill="#0057FF" fillOpacity="0.1" />
-
-                            {/* Floating decorative elements */}
-                            <circle cx="260" cy="240" r="4" fill="#00C6FF" />
-                            <circle cx="140" cy="110" r="6" fill="#0057FF" fillOpacity="0.4" />
-                            <circle cx="330" cy="260" r="5" fill="#EEF2FF" stroke="#0057FF" strokeWidth="1" />
-
-                            <defs>
-                                <linearGradient id="blue_grad_center" x1="165" y1="145" x2="235" y2="215" gradientUnits="userSpaceOnUse">
-                                    <stop stopColor="#0057FF" />
-                                    <stop offset="1" stopColor="#00C6FF" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-
                 </div>
             </div>
         </section>

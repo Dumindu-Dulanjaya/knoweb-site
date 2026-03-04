@@ -1,173 +1,249 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+
+const brandLogos = [
+    { name: 'Dialog', style: { fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.6rem', fontWeight: 700, color: 'rgba(255,255,255,0.25)' } },
+    { name: 'Cargills', style: { fontFamily: 'Outfit, sans-serif', fontSize: '1.4rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'rgba(255,255,255,0.2)' } },
+    { name: 'Softlogic', style: { fontFamily: 'Inter, sans-serif', fontSize: '1.25rem', fontWeight: 900, letterSpacing: '0.06em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.18)' } },
+    { name: 'Hemas', style: { fontFamily: 'Outfit, sans-serif', fontSize: '1.5rem', fontWeight: 700, color: 'rgba(255,255,255,0.22)' } },
+    { name: 'MAS Holdings', style: { fontFamily: 'Inter, sans-serif', fontSize: '1.1rem', fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.18)' } },
+    { name: 'Haycarb', style: { fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: '1.4rem', fontWeight: 700, color: 'rgba(255,255,255,0.22)' } },
+];
 
 export default function HeroSection() {
     return (
         <section
             style={{
-                background: 'linear-gradient(135deg, #020C1F 0%, #061A3A 50%, #020C1F 100%)',
+                background: '#0B0F14',
                 color: '#fff',
-                padding: '110px 0 90px',
+                paddingTop: '140px',
+                paddingBottom: '0',
                 position: 'relative',
                 overflow: 'hidden',
-                minHeight: '90vh',
+                minHeight: '100vh',
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
             }}
         >
-            {/* Background grid pattern */}
+            {/* Large dark blob shapes in background */}
             <div style={{
-                position: 'absolute', inset: 0,
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0)`,
-                backgroundSize: '48px 48px', pointerEvents: 'none',
+                position: 'absolute', top: '-120px', left: '-180px',
+                width: '700px', height: '700px',
+                borderRadius: '50%',
+                background: 'rgba(255,255,255,0.025)',
+                filter: 'blur(2px)',
+                pointerEvents: 'none',
             }} />
-            <div style={{ position: 'absolute', top: '-150px', right: '-10%', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(0,87,255,0.15) 0%, transparent 60%)', pointerEvents: 'none' }} />
-            <div style={{ position: 'absolute', bottom: '-100px', left: '-10%', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(0,198,255,0.08) 0%, transparent 60%)', pointerEvents: 'none' }} />
+            <div style={{
+                position: 'absolute', top: '-80px', right: '-200px',
+                width: '650px', height: '650px',
+                borderRadius: '50%',
+                background: 'rgba(255,255,255,0.02)',
+                filter: 'blur(2px)',
+                pointerEvents: 'none',
+            }} />
+            {/* Subtle green glow top center */}
+            <div style={{
+                position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
+                width: '700px', height: '300px',
+                background: 'radial-gradient(ellipse at 50% 0%, rgba(34,197,94,0.07) 0%, transparent 70%)',
+                pointerEvents: 'none',
+            }} />
 
-            <div className="container-max" style={{ position: 'relative', zIndex: 1 }}>
-                <div className="hero-grid" style={{ alignItems: 'center', gap: '64px' }}>
+            {/* ── Center Content ── */}
+            <div
+                className="container-max"
+                style={{
+                    position: 'relative', zIndex: 1,
+                    display: 'flex', flexDirection: 'column',
+                    alignItems: 'center', textAlign: 'center',
+                    width: '100%',
+                }}
+            >
+                {/* Badge */}
+                <div
+                    style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '8px',
+                        background: 'rgba(255,255,255,0.05)',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        padding: '6px 16px', borderRadius: '100px',
+                        fontSize: '0.72rem', fontWeight: 700,
+                        color: 'rgba(255,255,255,0.55)',
+                        marginBottom: '32px', letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        animation: 'heroFadeIn 0.6s ease-out forwards',
+                    }}
+                >
+                    <span style={{ color: '#22C55E', fontSize: '0.85rem' }}>🏆</span>
+                    Trusted By Growing Businesses Across Sri Lanka
+                </div>
 
-                    {/* ── Left Content ── */}
-                    <div style={{ animation: "heroFadeIn 0.8s ease-out forwards" }}>
-                        <div style={{
+                {/* Headline */}
+                <h1
+                    style={{
+                        fontFamily: 'Outfit, sans-serif',
+                        fontSize: 'clamp(2.4rem, 5.5vw, 4rem)',
+                        fontWeight: 800, lineHeight: 1.1,
+                        color: '#fff', marginBottom: '24px',
+                        letterSpacing: '-0.025em',
+                        maxWidth: '780px',
+                        animation: 'heroFadeIn 0.7s ease-out 0.1s both',
+                    }}
+                >
+                    Where Smart Software Meets{' '}
+                    <span
+                        style={{
+                            background: 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                            backgroundClip: 'text',
+                        }}
+                    >
+                        Real Business Results
+                    </span>
+                </h1>
+
+                {/* Subtitle */}
+                <p
+                    style={{
+                        color: 'rgba(255,255,255,0.55)',
+                        fontSize: '1.05rem',
+                        lineHeight: 1.7,
+                        marginBottom: '44px',
+                        maxWidth: '580px',
+                        animation: 'heroFadeIn 0.7s ease-out 0.2s both',
+                    }}
+                >
+                    We craft high-performance SaaS platforms and custom software systems for
+                    SMEs and enterprises that refuse to settle for messy spreadsheets.
+                </p>
+
+                {/* CTA Button */}
+                <div
+                    style={{
+                        display: 'flex', gap: '16px', flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        marginBottom: '72px',
+                        animation: 'heroFadeIn 0.7s ease-out 0.3s both',
+                    }}
+                >
+                    <Link
+                        href="/contact"
+                        style={{
                             display: 'inline-flex', alignItems: 'center', gap: '8px',
-                            background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
-                            padding: '6px 14px', borderRadius: '100px', fontSize: '0.75rem', fontWeight: 600,
-                            color: '#9CA3AF', marginBottom: '28px', letterSpacing: '0.02em',
-                        }}>
-                            <span style={{ color: '#00C6FF' }}>★</span>
-                            Trusted by growing businesses in Sri Lanka
-                        </div>
+                            background: '#22C55E',
+                            color: '#052E16',
+                            textDecoration: 'none',
+                            fontSize: '0.92rem', fontWeight: 700,
+                            padding: '14px 32px', borderRadius: '8px',
+                            boxShadow: '0 0 24px rgba(34,197,94,0.35)',
+                            transition: 'all 0.22s ease',
+                            letterSpacing: '0.01em',
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLAnchorElement).style.background = '#16A34A';
+                            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 0 36px rgba(34,197,94,0.55)';
+                            (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLAnchorElement).style.background = '#22C55E';
+                            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 0 24px rgba(34,197,94,0.35)';
+                            (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
+                        }}
+                    >
+                        Book a Meeting
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                    </Link>
 
-                        <h1 style={{
-                            fontFamily: 'Outfit, sans-serif',
-                            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                            fontWeight: 800, lineHeight: 1.05, color: '#fff', marginBottom: '24px', letterSpacing: '-0.02em',
-                        }}>
-                            Practical SaaS Platforms + <br />
-                            <span style={{ background: 'linear-gradient(135deg, #0057FF, #00C6FF)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                                Custom Software Systems
-                            </span>
-                        </h1>
+                    <Link
+                        href="/solutions"
+                        style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '8px',
+                            background: 'rgba(255,255,255,0.05)',
+                            border: '1px solid rgba(255,255,255,0.14)',
+                            color: 'rgba(255,255,255,0.8)',
+                            textDecoration: 'none',
+                            fontSize: '0.92rem', fontWeight: 600,
+                            padding: '14px 32px', borderRadius: '8px',
+                            transition: 'all 0.22s ease',
+                        }}
+                        onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.09)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.25)';
+                            (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
+                        }}
+                        onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.05)';
+                            (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.14)';
+                            (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
+                        }}
+                    >
+                        Explore Solutions
+                    </Link>
+                </div>
 
-                        <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '40px', maxWidth: '540px' }}>
-                            Built for real operations. We replace messy spreadsheets and fragmented tools with structured digital platforms that actually solve your operational bottlenecks.
-                        </p>
-
-                        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                            <Link href="/contact" style={{
-                                background: 'linear-gradient(135deg,#0057FF,#0080FF)',
-                                color: '#fff', textDecoration: 'none',
-                                fontSize: '0.95rem', fontWeight: 600,
-                                padding: '14px 32px', borderRadius: '8px',
-                                display: 'flex', alignItems: 'center', gap: '8px',
-                                transition: 'opacity 0.2s',
-                                boxShadow: '0 4px 16px rgba(0,87,255,0.25)',
-                            }}
-                                onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.9')}
-                                onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
-                            >
-                                Talk to Sales
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                            </Link>
-                            <Link href="/solutions" style={{
-                                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.15)',
-                                color: '#fff', textDecoration: 'none',
-                                fontSize: '0.95rem', fontWeight: 600,
-                                padding: '14px 32px', borderRadius: '8px',
-                                transition: 'background 0.2s',
-                            }}
-                                onMouseEnter={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.1)')}
-                                onMouseLeave={(e) => (e.currentTarget.style.background = 'rgba(255,255,255,0.05)')}
-                            >
-                                Explore Solutions
-                            </Link>
-                        </div>
+                {/* Hero Image */}
+                <div
+                    style={{
+                        width: '100%', maxWidth: '820px',
+                        borderRadius: '16px',
+                        overflow: 'hidden',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        boxShadow: '0 32px 80px rgba(0,0,0,0.55)',
+                        animation: 'heroSlideUp 0.9s cubic-bezier(0.1,0,0.2,1) 0.3s both',
+                        position: 'relative',
+                    }}
+                >
+                    {/* Inner top bar like a browser chrome */}
+                    <div style={{
+                        background: '#111827',
+                        borderBottom: '1px solid rgba(255,255,255,0.08)',
+                        padding: '10px 18px',
+                        display: 'flex', alignItems: 'center', gap: '8px',
+                    }}>
+                        <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#FF5F57' }} />
+                        <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#FFBD2E' }} />
+                        <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#28CA41' }} />
                     </div>
+                    <Image
+                        src="/hero-team.png"
+                        alt="Knoweb team collaborating at work"
+                        width={820}
+                        height={460}
+                        style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'cover' }}
+                        priority
+                    />
+                </div>
+            </div>
 
-                    {/* ── Right — Animated Dashboard visual ── */}
-                    <div style={{ position: 'relative', animation: "heroSlideUp 1s cubic-bezier(0.1, 0, 0.2, 1) forwards" }}>
-
-                        {/* Floating Mini Card 1 */}
-                        <div style={{
-                            position: 'absolute', top: '10%', left: '-8%', zIndex: 10,
-                            background: '#fff', color: '#0A0F1E', padding: '14px 20px', borderRadius: '12px',
-                            boxShadow: '0 12px 32px rgba(0,0,0,0.25)', display: 'flex', alignItems: 'center', gap: '12px',
-                            animation: 'heroFloat1 6s ease-in-out infinite',
-                        }}>
-                            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: 'rgba(0,87,255,0.1)', color: '#0057FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '0.85rem', fontWeight: 800 }}>SaaS Subscription</div>
-                                <div style={{ fontSize: '0.7rem', color: '#6B7280', fontWeight: 500 }}>Ready to deploy</div>
-                            </div>
-                        </div>
-
-                        {/* Floating Mini Card 2 */}
-                        <div style={{
-                            position: 'absolute', bottom: '15%', right: '-5%', zIndex: 10,
-                            background: '#fff', color: '#0A0F1E', padding: '14px 20px', borderRadius: '12px',
-                            boxShadow: '0 12px 32px rgba(0,0,0,0.25)', display: 'flex', alignItems: 'center', gap: '12px',
-                            animation: 'heroFloat2 7s ease-in-out infinite',
-                        }}>
-                            <div style={{ width: '36px', height: '36px', borderRadius: '8px', background: 'rgba(124,58,237,0.1)', color: '#7C3AED', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '0.85rem', fontWeight: 800 }}>Custom Delivery</div>
-                                <div style={{ fontSize: '0.7rem', color: '#6B7280', fontWeight: 500 }}>Built to spec</div>
-                            </div>
-                        </div>
-
-                        {/* Main Dashboard Card */}
-                        <div style={{
-                            background: '#0B1527', border: '1px solid rgba(255,255,255,0.1)',
-                            borderRadius: '16px', padding: '0',
-                            boxShadow: '0 24px 64px rgba(0,0,0,0.4)',
-                            overflow: 'hidden',
-                        }}>
-                            {/* Dashboard Header */}
-                            <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(255,255,255,0.02)' }}>
-                                <div style={{ display: 'flex', gap: '8px' }}>
-                                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#FF5F57' }} />
-                                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#FFBD2E' }} />
-                                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#28CA41' }} />
-                                </div>
-                                <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.75rem', fontWeight: 600 }}>Command Center</div>
-                                <div style={{ width: '40px', height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '10px' }} />
-                            </div>
-
-                            {/* Dashboard Body */}
-                            <div style={{ padding: '24px' }}>
-                                {/* Skeleton chart */}
-                                <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '140px', marginBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '16px' }}>
-                                    {[30, 50, 40, 70, 60, 90, 80, 100].map((h, i) => (
-                                        <div key={i} style={{ flex: 1, height: `${h}%`, background: i === 7 ? 'linear-gradient(180deg,#0057FF,#00C6FF)' : 'rgba(255,255,255,0.05)', borderRadius: '4px 4px 0 0', position: 'relative' }}>
-                                            {i === 7 && <div style={{ position: 'absolute', top: '-24px', left: '50%', transform: 'translateX(-50%)', background: '#fff', color: '#0057FF', fontSize: '0.65rem', fontWeight: 800, padding: '2px 6px', borderRadius: '4px' }}>+24%</div>}
-                                        </div>
-                                    ))}
-                                </div>
-
-                                {/* Skeleton List */}
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                                    {[1, 2, 3].map((item) => (
-                                        <div key={item} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.04)' }}>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                                                <div style={{ width: '32px', height: '32px', borderRadius: '6px', background: 'rgba(0,198,255,0.1)', color: '#00C6FF', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>✓</div>
-                                                <div>
-                                                    <div style={{ width: '120px', height: '8px', background: 'rgba(255,255,255,0.15)', borderRadius: '4px', marginBottom: '6px' }} />
-                                                    <div style={{ width: '80px', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px' }} />
-                                                </div>
-                                            </div>
-                                            <div style={{ width: '60px', height: '24px', borderRadius: '100px', background: 'rgba(40,202,65,0.1)', color: '#28CA41', fontSize: '0.65rem', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Active</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            {/* ── Brand Logos Strip ── */}
+            <div
+                style={{
+                    width: '100%',
+                    borderTop: '1px solid rgba(255,255,255,0.06)',
+                    marginTop: '72px',
+                    padding: '36px 0 48px',
+                    background: 'rgba(255,255,255,0.015)',
+                }}
+            >
+                <div
+                    className="container-max"
+                    style={{
+                        display: 'flex', flexWrap: 'wrap',
+                        alignItems: 'center', justifyContent: 'center',
+                        gap: '40px 56px',
+                    }}
+                >
+                    {brandLogos.map((brand) => (
+                        <span key={brand.name} style={brand.style}>
+                            {brand.name}
+                        </span>
+                    ))}
                 </div>
             </div>
         </section>

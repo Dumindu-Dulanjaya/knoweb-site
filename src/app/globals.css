@@ -855,3 +855,32 @@ textarea::placeholder {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ============================================================
+   HERO CENTERED (new centered single-column hero)
+   ============================================================ */
+
+@keyframes heroSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-knoweb-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-centered-img {
+    border-radius: 10px !important;
+  }
+}
