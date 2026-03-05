@@ -23,7 +23,7 @@ export default function SolutionModelsSection() {
                 }}>
                     {/* SaaS Card */}
                     <div style={{
-                        background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px',
+                        background: '#fff', border: '1px solid #E5E7EB', borderRadius: '0',
                         padding: '40px', position: 'relative', overflow: 'hidden',
                         display: 'flex', flexDirection: 'column',
                         transition: 'transform 0.3s, box-shadow 0.3s',
@@ -40,7 +40,7 @@ export default function SolutionModelsSection() {
                         }}>
                         <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'radial-gradient(circle,rgba(0,198,255,0.1) 0%,transparent 70%)', pointerEvents: 'none' }} />
 
-                        <div style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(0,198,255,0.1)', color: '#0097D9', fontSize: '0.75rem', fontWeight: 700, padding: '6px 14px', borderRadius: '100px', marginBottom: '24px', alignSelf: 'flex-start' }}>
+                        <div style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(0,198,255,0.1)', color: '#0097D9', fontSize: '0.75rem', fontWeight: 700, padding: '6px 14px', borderRadius: '0', marginBottom: '24px', alignSelf: 'flex-start' }}>
                             Model A
                         </div>
 
@@ -51,7 +51,7 @@ export default function SolutionModelsSection() {
                         <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '40px', flexGrow: 1 }}>
                             {['Ready-to-deploy platforms', 'Subscription pricing', 'Fast implementation', 'Scalable architecture'].map((item) => (
                                 <li key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '0.9rem', color: '#4B5563', lineHeight: 1.5 }}>
-                                    <span style={{ width: '18px', height: '18px', borderRadius: '50%', background: 'rgba(0,198,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                                    <span style={{ width: '18px', height: '18px', borderRadius: '0', background: 'rgba(0,198,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
                                         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5L4 7L8 3" stroke="#0097D9" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                     </span>
                                     {item}
@@ -59,7 +59,7 @@ export default function SolutionModelsSection() {
                             ))}
                         </ul>
 
-                        <Link href="/products" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#0057FF', border: 'none' }}>
+                        <Link href="/products" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#0057FF', border: 'none', borderRadius: '0' }}>
                             View Products
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M7.5 3L11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                         </Link>
@@ -67,7 +67,7 @@ export default function SolutionModelsSection() {
 
                     {/* Custom Card */}
                     <div style={{
-                        background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px',
+                        background: '#fff', border: '1px solid #E5E7EB', borderRadius: '0',
                         padding: '40px', position: 'relative', overflow: 'hidden',
                         display: 'flex', flexDirection: 'column',
                         transition: 'transform 0.3s, box-shadow 0.3s',
@@ -103,7 +103,7 @@ export default function SolutionModelsSection() {
                             ))}
                         </ul>
 
-                        <Link href="/custom-enterprise" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#0A0F1E', border: 'none' }}>
+                        <Link href="/custom-enterprise" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#0A0F1E', border: 'none', borderRadius: '0' }}>
                             Custom & Enterprise
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M7.5 3L11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                         </Link>
@@ -111,7 +111,7 @@ export default function SolutionModelsSection() {
 
                     {/* AI Card */}
                     <div style={{
-                        background: '#fff', border: '1px solid #E5E7EB', borderRadius: '16px',
+                        background: '#fff', border: '1px solid #E5E7EB', borderRadius: '0',
                         padding: '40px', position: 'relative', overflow: 'hidden',
                         display: 'flex', flexDirection: 'column',
                         transition: 'transform 0.3s, box-shadow 0.3s',
@@ -147,7 +147,7 @@ export default function SolutionModelsSection() {
                             ))}
                         </ul>
 
-                        <Link href="/ai-development" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#7C3AED', border: 'none' }}>
+                        <Link href="/ai-development" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#7C3AED', border: 'none', borderRadius: '0' }}>
                             AI Development
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7H11.5M7.5 3L11.5 7L7.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                         </Link>

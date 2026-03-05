@@ -91,7 +91,7 @@ export default function SolutionsWeDeliverSection() {
                             style={{
                                 background: '#ffffff',
                                 border: '1px solid #E2E8F0',
-                                borderRadius: '16px',
+                                borderRadius: '0',
                                 padding: '44px 44px 36px',
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -118,7 +118,7 @@ export default function SolutionsWeDeliverSection() {
                                 width: '130px',
                                 height: '130px',
                                 background: 'rgba(0,79,235,0.04)',
-                                borderRadius: '24px',
+                                borderRadius: '0',
                                 transform: 'rotate(20deg)',
                                 pointerEvents: 'none',
                             }} />
@@ -129,7 +129,7 @@ export default function SolutionsWeDeliverSection() {
                                 width: '70px',
                                 height: '70px',
                                 background: 'rgba(0,79,235,0.04)',
-                                borderRadius: '14px',
+                                borderRadius: '0',
                                 transform: 'rotate(15deg)',
                                 pointerEvents: 'none',
                             }} />

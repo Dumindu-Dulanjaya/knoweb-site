@@ -8,21 +8,21 @@ const resources = [
         category: 'Insights',
         author: 'Knoweb Editorial',
         date: 'Oct 12, 2023',
-        imageGradient: 'linear-gradient(135deg, #0057FF 0%, #00C6FF 100%)'
+        image: '/1.png'
     },
     {
         title: 'SaaS vs. Custom Software: Which is Right for Your Business?',
         category: 'Guides',
         author: 'Knoweb Editorial',
         date: 'Nov 05, 2023',
-        imageGradient: 'linear-gradient(135deg, #0A0F1E 0%, #2D3748 100%)'
+        image: '/2.png'
     },
     {
         title: 'Automating HR & Payroll: Compliance in a Growing Workforce',
         category: 'Best Practices',
         author: 'Knoweb Editorial',
         date: 'Dec 02, 2023',
-        imageGradient: 'linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)'
+        image: '/3.png'
     }
 ];
 
@@ -63,7 +63,7 @@ export default function ResourcesPreviewSection() {
                         <div key={i} style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            borderRadius: '16px',
+                            borderRadius: '0',
                             overflow: 'hidden',
                             border: '1px solid #E5E7EB',
                             transition: 'all 0.3s ease',
@@ -86,24 +86,17 @@ export default function ResourcesPreviewSection() {
                                 overflow: 'hidden',
                                 position: 'relative'
                             }}>
-                                <div
+                                <img
+                                    src={post.image}
+                                    alt={post.title}
                                     className="image-placeholder"
                                     style={{
                                         width: '100%',
                                         height: '100%',
-                                        background: post.imageGradient,
+                                        objectFit: 'cover',
                                         transition: 'transform 0.5s ease',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
                                     }}
-                                >
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" opacity="0.2">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="8.5" cy="8.5" r="1.5" fill="#fff" />
-                                        <polyline points="21 15 16 10 5 21" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </div>
+                                />
                                 <div style={{
                                     position: 'absolute',
                                     top: '20px',

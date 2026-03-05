@@ -113,10 +113,10 @@ export default function CTASection() {
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        background: '#CCFF00', // Bright lime green from 1st SS
+                        background: '#004FEB', // Bright lime green from 1st SS
                         color: '#000000',
                         padding: '16px 48px',
-                        borderRadius: '100px',
+                        borderRadius: '0',
                         fontSize: '1.05rem',
                         fontWeight: 600,
                         textDecoration: 'none',
@@ -124,11 +124,11 @@ export default function CTASection() {
                     }}
                         onMouseEnter={e => {
                             e.currentTarget.style.transform = 'scale(1.05)';
-                            e.currentTarget.style.background = '#d4ff1a';
+                            e.currentTarget.style.background = '#004FEB';
                         }}
                         onMouseLeave={e => {
                             e.currentTarget.style.transform = 'scale(1)';
-                            e.currentTarget.style.background = '#CCFF00';
+                            e.currentTarget.style.background = '#004FEB';
                         }}
                     >
                         Book a Call
@@ -143,7 +143,7 @@ export default function CTASection() {
                         background: 'transparent',
                         border: '1px solid rgba(255,255,255,0.3)',
                         color: '#ffffff',
-                        borderRadius: '100px',
+                        borderRadius: '0',
                         fontSize: '1.05rem',
                         fontWeight: 600,
                         textDecoration: 'none',
@@ -179,7 +179,7 @@ export default function CTASection() {
                         fontWeight: 600,
                         transition: 'color 0.2s'
                     }}
-                        onMouseEnter={e => e.currentTarget.style.color = '#CCFF00'}
+                        onMouseEnter={e => e.currentTarget.style.color = '#004FEB'}
                         onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
                     >
                         hello@knoweb.com
