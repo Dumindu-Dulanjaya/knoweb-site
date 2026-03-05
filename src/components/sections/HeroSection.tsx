@@ -49,7 +49,7 @@ export default function HeroSection() {
             <div style={{
                 position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
                 width: '700px', height: '300px',
-                background: 'radial-gradient(ellipse at 50% 0%, rgba(34,197,94,0.07) 0%, transparent 70%)',
+                background: 'radial-gradient(ellipse at 50% 0%, rgba(0,79,235,0.07) 0%, transparent 70%)',
                 pointerEvents: 'none',
             }} />
 
@@ -66,19 +66,34 @@ export default function HeroSection() {
                 {/* Badge */}
                 <div
                     style={{
-                        display: 'inline-flex', alignItems: 'center', gap: '8px',
-                        background: 'rgba(255,255,255,0.05)',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        padding: '6px 16px', borderRadius: '100px',
-                        fontSize: '0.72rem', fontWeight: 700,
-                        color: 'rgba(255,255,255,0.55)',
-                        marginBottom: '32px', letterSpacing: '0.08em',
-                        textTransform: 'uppercase',
+                        display: 'inline-flex', alignItems: 'center', gap: '10px',
+                        background: '#13171F',
+                        border: '1px solid rgba(255,255,255,0.08)',
+                        padding: '8px 20px 8px 10px',
+                        borderRadius: '6px',
+                        marginBottom: '32px',
                         animation: 'heroFadeIn 0.6s ease-out forwards',
                     }}
                 >
-                    <span style={{ color: '#22C55E', fontSize: '0.85rem' }}>🏆</span>
-                    Trusted By Growing Businesses Across Sri Lanka
+                    {/* Colored icon — styled like the Clutch badge in the reference */}
+                    <span style={{
+                        display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                        width: '26px', height: '26px', borderRadius: '50%',
+                        background: '#004FEB',
+                        flexShrink: 0,
+                    }}>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" />
+                        </svg>
+                    </span>
+                    <span style={{
+                        fontSize: '0.72rem', fontWeight: 800,
+                        color: '#ffffff',
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                    }}>
+                        Trusted By Growing Businesses Across Sri Lanka
+                    </span>
                 </div>
 
                 {/* Headline */}
@@ -96,7 +111,7 @@ export default function HeroSection() {
                     Where Smart Software Meets{' '}
                     <span
                         style={{
-                            background: 'linear-gradient(135deg, #22C55E 0%, #16A34A 100%)',
+                            background: 'linear-gradient(135deg, #004FEB 0%, #0040C8 100%)',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: 'transparent',
                             backgroundClip: 'text',
@@ -134,23 +149,23 @@ export default function HeroSection() {
                         href="/contact"
                         style={{
                             display: 'inline-flex', alignItems: 'center', gap: '8px',
-                            background: '#22C55E',
-                            color: '#052E16',
+                            background: '#004FEB',
+                            color: '#ffffff',
                             textDecoration: 'none',
                             fontSize: '0.92rem', fontWeight: 700,
-                            padding: '14px 32px', borderRadius: '8px',
-                            boxShadow: '0 0 24px rgba(34,197,94,0.35)',
+                            padding: '14px 32px', borderRadius: '0',
+                            boxShadow: '0 0 24px rgba(0,79,235,0.35)',
                             transition: 'all 0.22s ease',
                             letterSpacing: '0.01em',
                         }}
                         onMouseEnter={(e) => {
-                            (e.currentTarget as HTMLAnchorElement).style.background = '#16A34A';
-                            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 0 36px rgba(34,197,94,0.55)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = '#0040C8';
+                            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 0 36px rgba(0,79,235,0.55)';
                             (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
                         }}
                         onMouseLeave={(e) => {
-                            (e.currentTarget as HTMLAnchorElement).style.background = '#22C55E';
-                            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 0 24px rgba(34,197,94,0.35)';
+                            (e.currentTarget as HTMLAnchorElement).style.background = '#004FEB';
+                            (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 0 24px rgba(0,79,235,0.35)';
                             (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
                         }}
                     >
@@ -169,7 +184,7 @@ export default function HeroSection() {
                             color: 'rgba(255,255,255,0.8)',
                             textDecoration: 'none',
                             fontSize: '0.92rem', fontWeight: 600,
-                            padding: '14px 32px', borderRadius: '8px',
+                            padding: '14px 32px', borderRadius: '0',
                             transition: 'all 0.22s ease',
                         }}
                         onMouseEnter={(e) => {
@@ -190,32 +205,22 @@ export default function HeroSection() {
                 {/* Hero Image */}
                 <div
                     style={{
-                        width: '100%', maxWidth: '820px',
-                        borderRadius: '16px',
+                        width: '100%', maxWidth: '960px',
+                        borderRadius: '24px',
                         overflow: 'hidden',
-                        border: '1px solid rgba(255,255,255,0.1)',
-                        boxShadow: '0 32px 80px rgba(0,0,0,0.55)',
+                        border: '8px solid #2A3650',
+                        boxShadow: '0 40px 100px rgba(0,0,0,0.7)',
                         animation: 'heroSlideUp 0.9s cubic-bezier(0.1,0,0.2,1) 0.3s both',
                         position: 'relative',
+                        background: '#111827',
                     }}
                 >
-                    {/* Inner top bar like a browser chrome */}
-                    <div style={{
-                        background: '#111827',
-                        borderBottom: '1px solid rgba(255,255,255,0.08)',
-                        padding: '10px 18px',
-                        display: 'flex', alignItems: 'center', gap: '8px',
-                    }}>
-                        <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#FF5F57' }} />
-                        <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#FFBD2E' }} />
-                        <div style={{ width: '11px', height: '11px', borderRadius: '50%', background: '#28CA41' }} />
-                    </div>
                     <Image
                         src="/hero-team.png"
                         alt="Knoweb team collaborating at work"
-                        width={820}
-                        height={460}
-                        style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'cover' }}
+                        width={960}
+                        height={540}
+                        style={{ display: 'block', width: '100%', height: '540px', objectFit: 'cover', objectPosition: 'center' }}
                         priority
                     />
                 </div>

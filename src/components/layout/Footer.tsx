@@ -126,7 +126,7 @@ export default function Footer() {
                                         transition: 'background 0.2s, transform 0.2s',
                                     }}
                                     onMouseEnter={(e) => {
-                                        (e.currentTarget as HTMLAnchorElement).style.background = '#22C55E';
+                                        (e.currentTarget as HTMLAnchorElement).style.background = '#004FEB';
                                         (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
                                     }}
                                     onMouseLeave={(e) => {
@@ -151,7 +151,7 @@ export default function Footer() {
                                     <Link
                                         href={l.href}
                                         style={linkStyle}
-                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#22C55E')}
+                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#004FEB')}
                                         onMouseLeave={(e) => (e.currentTarget.style.color = '#6B7280')}
                                     >
                                         {l.label}
@@ -172,7 +172,7 @@ export default function Footer() {
                                     <Link
                                         href={l.href}
                                         style={linkStyle}
-                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#22C55E')}
+                                        onMouseEnter={(e) => (e.currentTarget.style.color = '#004FEB')}
                                         onMouseLeave={(e) => (e.currentTarget.style.color = '#6B7280')}
                                     >
                                         {l.label}
@@ -201,14 +201,14 @@ export default function Footer() {
                                     width: '100%', padding: '12px 16px',
                                     background: '#fff',
                                     border: '1px solid #D1D5DB',
-                                    borderRadius: '8px',
+                                    borderRadius: '0',
                                     color: '#111827', fontSize: '0.875rem',
                                     outline: 'none',
                                     transition: 'border-color 0.2s, box-shadow 0.2s',
                                 }}
                                 onFocus={(e) => {
-                                    e.currentTarget.style.borderColor = '#22C55E';
-                                    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(34,197,94,0.1)';
+                                    e.currentTarget.style.borderColor = '#004FEB';
+                                    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(0,79,235,0.1)';
                                 }}
                                 onBlur={(e) => {
                                     e.currentTarget.style.borderColor = '#D1D5DB';
@@ -221,14 +221,14 @@ export default function Footer() {
                                     width: '100%', padding: '12px',
                                     background: '#111827',
                                     color: '#fff', border: 'none',
-                                    borderRadius: '8px', fontWeight: 700,
+                                    borderRadius: '0', fontWeight: 700,
                                     fontSize: '0.9rem', cursor: 'pointer',
                                     transition: 'all 0.2s ease',
                                     letterSpacing: '0.01em',
                                 }}
                                 onMouseEnter={(e) => {
-                                    e.currentTarget.style.background = '#22C55E';
-                                    e.currentTarget.style.color = '#052E16';
+                                    e.currentTarget.style.background = '#004FEB';
+                                    e.currentTarget.style.color = '#ffffff';
                                     e.currentTarget.style.transform = 'translateY(-1px)';
                                 }}
                                 onMouseLeave={(e) => {
@@ -253,7 +253,7 @@ export default function Footer() {
                         <Link
                             href="#"
                             style={{ color: '#9CA3AF', textDecoration: 'none', transition: 'color 0.2s' }}
-                            onMouseEnter={(e) => (e.currentTarget.style.color = '#22C55E')}
+                            onMouseEnter={(e) => (e.currentTarget.style.color = '#004FEB')}
                             onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}
                         >
                             Privacy Policy
@@ -262,7 +262,7 @@ export default function Footer() {
                         <Link
                             href="#"
                             style={{ color: '#9CA3AF', textDecoration: 'none', transition: 'color 0.2s' }}
-                            onMouseEnter={(e) => (e.currentTarget.style.color = '#22C55E')}
+                            onMouseEnter={(e) => (e.currentTarget.style.color = '#004FEB')}
                             onMouseLeave={(e) => (e.currentTarget.style.color = '#9CA3AF')}
                         >
                             Terms of Service

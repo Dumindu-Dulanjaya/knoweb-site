@@ -28,11 +28,11 @@ export default function WhyKnowebSection() {
                         <div
                             style={{
                                 display: 'inline-flex', alignItems: 'center', gap: '6px',
-                                background: 'rgba(34,197,94,0.1)',
-                                border: '1px solid rgba(34,197,94,0.2)',
+                                background: 'rgba(0,79,235,0.1)',
+                                border: '1px solid rgba(0,79,235,0.2)',
                                 padding: '4px 14px', borderRadius: '100px',
                                 fontSize: '0.7rem', fontWeight: 700,
-                                color: '#22C55E', marginBottom: '24px',
+                                color: '#004FEB', marginBottom: '24px',
                                 letterSpacing: '0.06em', textTransform: 'uppercase',
                             }}
                         >
@@ -49,7 +49,7 @@ export default function WhyKnowebSection() {
                             }}
                         >
                             Practical Software for{' '}
-                            <span style={{ color: '#22C55E' }}>Real Business Growth.</span>
+                            <span style={{ color: '#004FEB' }}>Real Business Growth.</span>
                         </h2>
 
                         <p
@@ -92,14 +92,14 @@ export default function WhyKnowebSection() {
                                 color: 'rgba(255,255,255,0.85)',
                                 textDecoration: 'none',
                                 fontSize: '0.9rem', fontWeight: 600,
-                                padding: '12px 28px', borderRadius: '8px',
+                                padding: '12px 28px', borderRadius: '0',
                                 transition: 'all 0.22s ease',
                                 letterSpacing: '0.01em',
                             }}
                             onMouseEnter={(e) => {
-                                (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(34,197,94,0.1)';
-                                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(34,197,94,0.3)';
-                                (e.currentTarget as HTMLAnchorElement).style.color = '#22C55E';
+                                (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(0,79,235,0.1)';
+                                (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(0,79,235,0.3)';
+                                (e.currentTarget as HTMLAnchorElement).style.color = '#004FEB';
                                 (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-2px)';
                             }}
                             onMouseLeave={(e) => {
@@ -117,57 +117,55 @@ export default function WhyKnowebSection() {
                     </div>
 
                     {/* ── Right: Team Photo ── */}
-                    <div style={{ position: 'relative' }}>
-                        {/* Green glow behind image */}
+                    <div style={{ position: 'relative', padding: '28px 0 28px 0' }}>
+
+                        {/* Top-left blue square decoration */}
                         <div style={{
-                            position: 'absolute', top: '50%', left: '50%',
-                            transform: 'translate(-50%, -50%)',
-                            width: '80%', height: '80%',
-                            background: 'radial-gradient(circle, rgba(34,197,94,0.08) 0%, transparent 70%)',
-                            pointerEvents: 'none', zIndex: 0,
+                            position: 'absolute', top: 0, left: '0px',
+                            width: '250px', height: '250px',
+                            background: '#004FEB',
+                            zIndex: 0,
                         }} />
 
-                        <div
-                            style={{
-                                borderRadius: '0', overflow: 'hidden',
-                                border: '1px solid rgba(255,255,255,0.1)',
-                                boxShadow: '0 24px 64px rgba(0,0,0,0.5)',
-                                position: 'relative', zIndex: 1,
-                            }}
-                        >
+                        {/* Main image */}
+                        <div style={{
+                            position: 'relative', zIndex: 1,
+                            border: '1px solid rgba(255,255,255,0.12)',
+                            overflow: 'hidden',
+                            marginLeft: '28px',
+                            marginRight: '0',
+                        }}>
                             <Image
                                 src="/about-team.png"
                                 alt="Knoweb team working on software systems"
                                 width={600}
-                                height={420}
-                                style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'cover' }}
+                                height={440}
+                                style={{ display: 'block', width: '100%', height: '440px', objectFit: 'cover', objectPosition: 'center' }}
                             />
                         </div>
 
-                        {/* Floating Stat Badge */}
+                        {/* Bottom-right blue square with stat badge */}
                         <div style={{
-                            position: 'absolute', bottom: '-24px', left: '-24px', zIndex: 10,
-                            background: '#131C2E',
-                            border: '1px solid rgba(255,255,255,0.1)',
-                            borderRadius: '14px', padding: '16px 22px',
-                            boxShadow: '0 12px 32px rgba(0,0,0,0.4)',
-                            display: 'flex', alignItems: 'center', gap: '14px',
-                            animation: 'heroFloat1 6s ease-in-out infinite',
+                            position: 'absolute', bottom: 0, right: '-12px',
+                            width: '150px', height: '150px',
+                            background: '#004FEB',
+                            zIndex: 2,
+                            display: 'flex', flexDirection: 'column',
+                            alignItems: 'flex-start', justifyContent: 'flex-end',
+                            padding: '20px 22px',
                         }}>
                             <div style={{
-                                width: '42px', height: '42px', borderRadius: '10px',
-                                background: 'rgba(34,197,94,0.12)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                color: '#22C55E', fontSize: '1.2rem',
-                            }}>
-                                ✓
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#F1F5F9', lineHeight: 1.1 }}>50+</div>
-                                <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', fontWeight: 500, marginTop: '2px' }}>
-                                    Businesses Deployed
-                                </div>
-                            </div>
+                                fontSize: '2.4rem', fontWeight: 800,
+                                color: '#fff', lineHeight: 1,
+                                marginBottom: '6px',
+                                fontFamily: 'Outfit, sans-serif',
+                            }}>50+</div>
+                            <div style={{
+                                fontSize: '0.68rem', fontWeight: 700,
+                                color: 'rgba(255,255,255,0.75)',
+                                letterSpacing: '0.1em',
+                                textTransform: 'uppercase',
+                            }}>Businesses Deployed</div>
                         </div>
                     </div>
                 </div>

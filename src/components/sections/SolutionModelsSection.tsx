@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function SolutionModelsSection() {
     return (
-        <section className="section-pad surface-light" style={{ padding: '100px 0' }}>
+        <section className="section-pad surface-light" style={{ padding: '100px 0', background: '#ffffff' }}>
             <div className="container-max">
                 <div className="section-header centered" style={{ marginBottom: '60px' }}>
                     <div className="tag" style={{ marginBottom: '16px', display: 'inline-flex' }}>Our Offering</div>
